@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body * {
+          margin: 10px;
+          border: 1px solid blue;
+        }
+      </style>
+</head>
+<body>
+    <form onclick="alert('form')">FORM
+        <div onclick="alert('div')">DIV
+          <p onclick="alert('p')">P</p>
+          <button onclick="event.stopPropagation()">Click me</button>
+
+        </div>
+      </form>
+       <!--  Event bubbling is -> when we click on p it triggers click of p then div then form automatically- ,        When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+
+        If we use event.stopPropagation() then it doesnt't work for parent -->
+
+        <a href="JavaScript:void(0);" onclick="alert('Well done!')">
+            Click Me!
+          </a> <!---------void(0) prvent the page from refreshing-->
+
+
+</body>
